@@ -7,19 +7,11 @@ class Program
 		try
 		{
 			int[] numbers = { 1, 2, 3 };
-			Console.WriteLine(numbers[5]); // This will throw an IndexOutOfRangeException
+			Console.WriteLine(numbers[5]);
 		}
 		catch (IndexOutOfRangeException e)
 		{
-			Console.WriteLine("Oops, you went out of bounds!");
-		}
-		catch (Exception e)
-		{
-			Console.WriteLine("An error occurred: " + e.Message);
-		}
-		finally
-		{
-			Console.WriteLine("The 'try catch' is finished.");
+			Console.WriteLine($"Oops, you went out of bounds {e.Message}!");
 		}
 	}
 }
